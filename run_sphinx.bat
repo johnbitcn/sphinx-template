@@ -1,0 +1,1 @@
+sphinx-autobuild -q -B -j4 --ignore "*.swp" --ignore "*.pdf" --ignore "*.log" --ignore "*.out" --ignore "*.toc" --ignore "*.aux" --ignore "*.idx" --ignore "*.ind" --ignore "*.ilg" --ignore "*.tex" source build\_html

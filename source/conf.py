@@ -20,7 +20,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('..'+os.path.extsep+'..'))
+sys.path.insert(0, os.path.abspath('..'+os.path.sep+'..'))
 
 
 # -- General configuration ------------------------------------------------
@@ -39,7 +39,20 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode']
+    'sphinx.ext.viewcode',
+    'sphinx.ext.graphviz',
+    # 'rst2pdf.pdfbuilder'
+]
+
+# index - master document
+# rst2pdf - name of the generated pdf
+# Sample rst2pdf doc - title of the pdf
+# Your Name - author name in the pdf
+# pdf_documents = [('index', 'rst2pdf', 'John Docs', 'John'),]
+
+
+graphviz_dot = r'C:\Program Files (x86)\Graphviz2.38\bin\dot.exe'
+graphviz_output_format = 'svg'
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -73,7 +86,7 @@ release = 'latest'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'zh_cn'
+language = 'zh_CN'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

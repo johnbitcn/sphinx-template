@@ -140,40 +140,43 @@ htmlhelp_basename = 'accountingdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
+    # the paper size ('letterpaper' or 'a4paper').
+    'papersize': 'a4paper',
 
-    # The font size ('10pt', '11pt' or '12pt').
-    #
+    # the font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
+    # additional stuff for the latex preamble.
     #
-    # 'preamble': '',
+    'preamble': r'''
+        \usepackage{xeCJK}
+        \usepackage{epstopdf}
+        \usepackage{svg}
+        \usepackage{svgcolor}
+    ''',
 
     # Latex figure (float) alignment
     #
-    # 'figure_align': 'htbp',
+    'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'accounting.tex', 'accounting Documentation',
-     'john', 'manual'),
+    ('index_latex', 'accounting.tex', 'accounting Documentation',
+     'john', 'manual', True),
 ]
 
+latex_domain_indices = False
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'accounting', 'accounting Documentation',
-     [author], 1)
-]
+# man_pages = [
+#     (master_doc, 'accounting', 'accounting Documentation',
+#      [author], 1)
+# ]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -181,14 +184,14 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'accounting', 'accounting Documentation',
-     author, 'accounting', 'One line description of project.',
-     'Miscellaneous'),
-]
+# texinfo_documents = [
+#     (master_doc, 'accounting', 'accounting Documentation',
+#      author, 'accounting', 'One line description of project.',
+#      'Miscellaneous'),
+# ]
 
 
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+# intersphinx_mapping = {'https://docs.python.org/': None}

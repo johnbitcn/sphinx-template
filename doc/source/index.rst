@@ -10,8 +10,8 @@ Sphinx 自定义文档
     :maxdepth: 2
 
     sphinx_installation
-    sphinx_rtd_theme
-    latex
+..    sphinx_rtd_theme
+..    latex
 
 Indices and tables
 ==================
